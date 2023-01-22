@@ -1,0 +1,16 @@
+<h4>edit page</h4>
+
+<%= form_with model: @list, url: list_path(@list.id), method: :patch do |f| %>
+
+  <h4>title</h4>
+  <%= f.text_field :title %>
+
+  <h4>body</h4>
+  <%= f.text_area :body %>
+  <h4>image</h4>
+  <%= f.file_field :image, accept: "image/*" %><br><br>
+  <%= f.submit "保存" %>
+
+<% end %>
+
+
